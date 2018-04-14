@@ -3,6 +3,8 @@
 # Initial Investigation into the Iris Data Set
 
 # Below is adapted from https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
+# The following aided in understanding Pandas: https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python#question1
+
 
 #Importing Package 
 import sys
@@ -26,3 +28,39 @@ print(dataset.describe())
 # Saving Data to a CSV file
 data_full = dataset.describe()
 data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
+
+# Creating a DataFrame for each Species
+# Setosa
+setosa = dataset[dataset['species']=='setosa']
+print(setosa.describe())
+setosa.to_csv('Data_Setosa_Breakdown.csv',sep=',')
+
+# Versicolor
+versicolor = dataset[dataset['species']=='versicolor']
+print(versicolor.describe())
+versicolor.to_csv('Data_Versicolor_Breakdown.csv',sep=',')
+
+# Virginica
+virginica = dataset[dataset['species']=='virginica']
+print(virginica.describe())
+virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
+
+#Scatter plot of Sepal and Petal
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(21, 10))
+
+setosa.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],label='setosa',color='r')
+versicolor.plot(x="sepal_length",y="sepal_width",kind="scatter",ax=ax[0],label='versicolor',color='b')
+virginica.plot(x="sepal_length", y="sepal_width", kind="scatter", ax=ax[0], label='virginica', color='g')
+
+setosa.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],label='setosa',color='r')
+versicolor.plot(x="petal_length",y="petal_width",kind="scatter",ax=ax[1],label='versicolor',color='b')
+virginica.plot(x="petal_length", y="petal_width", kind="scatter", ax=ax[1], label='virginica', color='g')
+
+ax[0].set(title='Sepal Comparasion ', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+plt.show()
+plt.close()
+
