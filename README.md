@@ -10,18 +10,8 @@ The project initially is comprised of research in the Iris Data Set. This will i
 # Initial Research
 Ronald Fisher, a British statistician and biologist, first introduced the Iris Data set in 1936 in an article published in the peer-reviewed journal *Annals of Human Genetics*. [1] The article, *The use of multiple measurements in taxonomic problems*, details the measurements of three species of Iris flower that were growing within the same colony. The four measurements taken, for fifty of each the species, were the Sepal length, Sepal width, Petal length and Petal width. These measurements, which can be seen in table I of the article, would become the well known and commonly used Iris Data set. The three species were the iris setosa, iris versicolor and iris virginica.
 
-<b>Iris Setosa</b> [2]
-
-![](Iris_Setosa.png)
-
-<b>Iris Versicolor</b> [2]
-
-![](Iris_Versicolor.png)
-
-<b>Iris Virginica</b> [2]
-
-![](Iris_Virginica.png)
-
+![](Iris_Images.png)
+<b>Image 1:</b> Three species of Iris flower utilies in the data set. [2]
 
 The article continues to describe the arithmetical produce utilized in the analysis of the data. Beginning with the observed means and their differences for two of the species before specifying more in-depth statistical analysis. [1]
 
