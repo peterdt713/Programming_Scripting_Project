@@ -113,10 +113,25 @@ virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
     | max   | 7.9                | 3.8                | 6.9                | 2.5                 | 
  <b>Table 4:</b> Descriptive Statistics for virginica dataset, were percentage is representational of pertentiles.
 
-* *paste code & dataset.describe*
-* Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
-* *paste code & Scatterplots & describe trends noted*
 
+* Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
+
+  * Setosa
+~~~
+#Setosa - Comparison of Petal Length vs Petal Width & Sepal Length vs Sepal width
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(17, 9))
+setosa.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
+setosa.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],sharex=False,sharey=False,label="petal",color='b')
+ax[0].set(title='Sepal Comparasion Setosa', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion Setosa',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+plt.show()
+plt.close()
+~~~
+
+![](Setosa Scatter Plot.png)
 
 # References **Edit to Havard Style*
 
