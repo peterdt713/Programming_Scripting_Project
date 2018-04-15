@@ -41,8 +41,7 @@ data_full = dataset.describe()
 data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
 ~~~
 
-|Full Data Set                                                                              |
-|-------|--------------------|--------------------|--------------------|--------------------|  
+|Full Data Set                                                                              | 
 |       | sepal_length       | sepal_width        | petal_length       | petal_width        | 
 |-------|--------------------|--------------------|--------------------|--------------------| 
 | count | 150.0              | 150.0              | 150.0              | 150.0              | 
