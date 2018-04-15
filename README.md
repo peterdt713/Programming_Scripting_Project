@@ -19,16 +19,16 @@ The article continues to describe the arithmetical produce utilized in the analy
 Upon beginning to research the methods into how to visualize the Iris Data set, Pandas Dataframes was discovered. Several tools are available to aid in the understanding and use. 
 
 Steps:
-Downloaded the Iris Data Set and subsequently imported the data into pandas.
-*paste code*
-Verified that the sample size of each species was 50. As in accordance with the background research.
-*paste code*
-Using dataset.describe, *insert reference*,  to calculate the Count, Mean, STD, Min & Max and the percentiles of the dataset. After this was visualized using the print function and finally this was saved into a CSV file.
-*paste code & dataset.describe*
-This was repeated for all three species.
-*paste code & dataset.describe*
-Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
-*paste code & Scatterplots & describe trends noted*
+* Downloaded the Iris Data Set and subsequently imported the data into pandas.
+* *paste code*
+* Verified that the sample size of each species was 50. As in accordance with the background research.
+* *paste code*
+* Using dataset.describe, *insert reference*,  to calculate the Count, Mean, STD, Min & Max and the percentiles of the dataset. After this was visualized using the print function and finally this was saved into a CSV file.
+* *paste code & dataset.describe*
+* This was repeated for all three species.
+* *paste code & dataset.describe*
+* Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
+* *paste code & Scatterplots & describe trends noted*
 
 
 # References **Edit to Havard Style*
