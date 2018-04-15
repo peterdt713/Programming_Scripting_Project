@@ -31,6 +31,7 @@ dataset = pandas.read_csv(raw_data)
 print(dataset.groupby('species').size())
 ~~~
 * Using dataset.describe, *insert reference*,  to calculate the Count, Mean, STD, Min & Max and the percentiles of the dataset. After this was visualized using the print function and finally this was saved into a CSV file.
+
 |       | sepal_length       | sepal_width        | petal_length       | petal_width        | 
 |-------|--------------------|--------------------|--------------------|--------------------| 
 | count | 150.0              | 150.0              | 150.0              | 150.0              | 
