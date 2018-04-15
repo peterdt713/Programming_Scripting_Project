@@ -51,6 +51,7 @@ data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
 | 50%   | 5.8                | 3.0                | 4.35               | 1.3                | 
 | 75%   | 6.4                | 3.3                | 5.1                | 1.8                | 
 | max   | 7.9                | 4.4                | 6.9                | 2.5                | 
+
 <b>Table 1:</b> Descriptive Statistics for entire dataset, were percentage is representational of pertentiles.
 
 * This was repeated for all three species.
