@@ -131,7 +131,7 @@ plt.show()
 plt.close()
 ~~~
 
-![](Setosa Scatter Plot.png)
+![](Setosa_Scatter.png)
 
 # References **Edit to Havard Style*
 
