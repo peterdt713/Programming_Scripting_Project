@@ -82,8 +82,36 @@ virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
     | 25%   | 4.8                | 3.125               | 1.4                | 0.2                 | 
     | 50%   | 5.0                | 3.4                 | 1.5                | 0.2                 | 
     | 75%   | 5.2                | 3.6750000000000003  | 1.5750000000000002 | 0.3                 | 
-    | max   | 5.8                | 4.4                 | 1.9                | 0.6                 | 
+    | max   | 5.8                | 4.4                 | 1.9                | 0.6                 |
+ <b>Table 2:</b> Descriptive Statistics for setosa dataset, were percentage is representational of pertentiles.
 
+  * Versicolor
+
+    |       | sepal_length       | sepal_width        | petal_length        | petal_width        | 
+    |-------|--------------------|--------------------|---------------------|--------------------| 
+    | count | 50.0               | 50.0               | 50.0                | 50.0               | 
+    | mean  | 5.936              | 2.7700000000000005 | 4.26                | 1.3259999999999998 | 
+    | std   | 0.5161711470638635 | 0.3137983233784114 | 0.46991097723995806 | 0.197752680004544  | 
+    | min   | 4.9                | 2.0                | 3.0                 | 1.0                | 
+    | 25%   | 5.6                | 2.525              | 4.0                 | 1.2                | 
+    | 50%   | 5.9                | 2.8                | 4.35                | 1.3                | 
+    | 75%   | 6.3                | 3.0                | 4.6                 | 1.5                | 
+    | max   | 7.0                | 3.4                | 5.1                 | 1.8                | 
+ <b>Table 3:</b> Descriptive Statistics for versicolor dataset, were percentage is representational of pertentiles.
+
+  * Virginica
+
+    |       | sepal_length       | sepal_width        | petal_length       | petal_width         | 
+    |-------|--------------------|--------------------|--------------------|---------------------| 
+    | count | 50.0               | 50.0               | 50.0               | 50.0                | 
+    | mean  | 6.587999999999998  | 2.9739999999999998 | 5.552              | 2.026               | 
+    | std   | 0.635879593274432  | 0.3224966381726376 | 0.5518946956639835 | 0.27465005563666733 | 
+    | min   | 4.9                | 2.2                | 4.5                | 1.4                 | 
+    | 25%   | 6.2250000000000005 | 2.8                | 5.1                | 1.8                 | 
+    | 50%   | 6.5                | 3.0                | 5.55               | 2.0                 | 
+    | 75%   | 6.9                | 3.1750000000000003 | 5.875000000000001  | 2.3                 | 
+    | max   | 7.9                | 3.8                | 6.9                | 2.5                 | 
+ <b>Table 4:</b> Descriptive Statistics for virginica dataset, were percentage is representational of pertentiles.
 
 * *paste code & dataset.describe*
 * Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
