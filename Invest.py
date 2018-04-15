@@ -19,7 +19,7 @@ import warnings
 raw_data="iris.data.csv"
 dataset = pandas.read_csv(raw_data)
 
-#Count the size of each Species Size
+#Count the size of each Species
 print(dataset.groupby('species').size())
 
 # Describe the Data set
