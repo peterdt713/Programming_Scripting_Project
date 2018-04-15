@@ -15,8 +15,31 @@ Ronald Fisher, a British statistician and biologist, first introduced the Iris D
 
 The article continues to describe the arithmetical produce utilized in the analysis of the data. Beginning with the observed means and their differences for two of the species before specifying more in-depth statistical analysis. [1]
 
+# Python Research
+Upon beginning to research the methods into how to visualize the Iris Data set, Pandas Dataframes was discovered. Several tools are available to aid in the understanding and use. 
+
+Steps:
+Downloaded the Iris Data Set and subsequently imported the data into pandas.
+*paste code*
+Verified that the sample size of each species was 50. As in accordance with the background research.
+*paste code*
+Using dataset.describe, *insert reference*,  to calculate the Count, Mean, STD, Min & Max and the percentiles of the dataset. After this was visualized using the print function and finally this was saved into a CSV file.
+*paste code & dataset.describe*
+This was repeated for all three species.
+*paste code & dataset.describe*
+Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
+*paste code & Scatterplots & describe trends noted*
+
+
 # References **Edit to Havard Style*
 
 [1] https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 
 [2] http://mirlab.org/jang/books/dcpr/dataSetIris.asp?title=2-2%20Iris%20Dataset
+
+[3] https://pandas.pydata.org/pandas-docs/stable/visualization.html
+
+[4] https://www.datacamp.com/community/tutorials/pandas-tutorial-dataframe-python#question1
+
+[5] https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
+

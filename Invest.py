@@ -45,7 +45,43 @@ virginica = dataset[dataset['species']=='virginica']
 print(virginica.describe())
 virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
 
-#Scatter plot of Sepal and Petal
+#Setosa - Comparison of Petal Length vs Petal Width & Sepal Length vs Sepal width
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(17, 9))
+setosa.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
+setosa.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],sharex=False,sharey=False,label="petal",color='b')
+ax[0].set(title='Sepal Comparasion Setosa', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion Setosa',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+plt.show()
+plt.close()
+
+#Versicolor - Comparison of Petal Length vs Petal Width & Sepal Length vs Sepal width
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(17, 9))
+versicolor.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
+versicolor.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],sharex=False,sharey=False,label="petal",color='b')
+ax[0].set(title='Sepal Comparasion Versicolor', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion Versicolor',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+plt.show()
+plt.close()
+
+#Virginica - Comparison of Petal Length vs Petal Width & Sepal Length vs Sepal width
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(17, 9))
+virginica.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
+virginica.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],sharex=False,sharey=False,label="petal",color='b')
+ax[0].set(title='Sepal Comparasion Virginica', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion Virginica',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+plt.show()
+plt.close()
+
+#Scatter plot of Sepal and Petal - All Species
 plt.figure()
 fig,ax=plt.subplots(1,2,figsize=(21, 10))
 
