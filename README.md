@@ -71,7 +71,7 @@ virginica = dataset[dataset['species']=='virginica']
 print(virginica.describe())
 virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
 ~~~
-  * Setosa
+  - Setosa
 
 |       | sepal_length       | sepal_width         | petal_length       | petal_width         | 
 |-------|--------------------|---------------------|--------------------|---------------------| 
