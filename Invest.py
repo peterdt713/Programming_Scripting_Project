@@ -32,18 +32,21 @@ data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
 # Creating a DataFrame for each Species
 # Setosa
 setosa = dataset[dataset['species']=='setosa']
+data_setosa = setosa.describe()
 print(setosa.describe())
-setosa.to_csv('Data_Setosa_Breakdown.csv',sep=',')
+data_setosa.to_csv('Data_Setosa_Breakdown.csv',sep=',')
 
 # Versicolor
 versicolor = dataset[dataset['species']=='versicolor']
+data_versicolor = versicolor.describe()
 print(versicolor.describe())
-versicolor.to_csv('Data_Versicolor_Breakdown.csv',sep=',')
+data_versicolor.to_csv('Data_Versicolor_Breakdown.csv',sep=',')
 
 # Virginica
 virginica = dataset[dataset['species']=='virginica']
+data_virginica = virginica.describe()
 print(virginica.describe())
-virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
+data_virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
 
 #Setosa - Comparison of Petal Length vs Petal Width & Sepal Length vs Sepal width
 plt.figure()
