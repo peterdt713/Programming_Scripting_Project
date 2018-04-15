@@ -20,7 +20,11 @@ Upon beginning to research the methods into how to visualize the Iris Data set, 
 
 Steps:
 * Downloaded the Iris Data Set and subsequently imported the data into pandas.
-* *paste code*
+~~~~
+#Import Iris Data set into Pandas
+raw_data="iris.data.csv"
+dataset = pandas.read_csv(raw_data)
+~~~~
 * Verified that the sample size of each species was 50. As in accordance with the background research.
 * *paste code*
 * Using dataset.describe, *insert reference*,  to calculate the Count, Mean, STD, Min & Max and the percentiles of the dataset. After this was visualized using the print function and finally this was saved into a CSV file.
@@ -43,3 +47,4 @@ Steps:
 
 [5] https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
 
+[6] https://en.support.wordpress.com/markdown-quick-reference/
