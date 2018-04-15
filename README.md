@@ -30,7 +30,16 @@ dataset = pandas.read_csv(raw_data)
 #Count the size of each Species
 print(dataset.groupby('species').size())
 ~~~
-* Using dataset.describe, *insert reference*,  to calculate the Count, Mean, STD, Min & Max and the percentiles of the dataset. After this was visualized using the print function and finally this was saved into a CSV file.
+* Using dataset.describe, *insert reference*,  to generate descriptive statistics. This includes the Count, Mean, STD, Min & Max and the percentiles of the dataset. Subsequently, this was visualized using the print function and finally this was saved into a CSV file.
+
+~~~
+# Describe the Data set
+print(dataset.describe())
+
+# Saving Data to a CSV file
+data_full = dataset.describe()
+data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
+~~~
 
 |       | sepal_length       | sepal_width        | petal_length       | petal_width        | 
 |-------|--------------------|--------------------|--------------------|--------------------| 
@@ -42,8 +51,8 @@ print(dataset.groupby('species').size())
 | 50%   | 5.8                | 3.0                | 4.35               | 1.3                | 
 | 75%   | 6.4                | 3.3                | 5.1                | 1.8                | 
 | max   | 7.9                | 4.4                | 6.9                | 2.5                | 
+<b>Table 1:</b> Descriptive Statistics for entire dataset, were percentage is representational of pertentiles.
 
-* *paste code & dataset.describe*
 * This was repeated for all three species.
 * *paste code & dataset.describe*
 * Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
