@@ -31,7 +31,6 @@ dataset = pandas.read_csv(raw_data)
 print(dataset.groupby('species').size())
 ~~~
 * Using dataset.describe, *insert reference*,  to generate descriptive statistics. This includes the Count, Mean, STD, Min & Max and the percentiles of the dataset. Subsequently, this was visualized using the print function and finally this was saved into a CSV file.
-
 ~~~
 # Describe the Data set
 print(dataset.describe())
@@ -54,7 +53,38 @@ data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
 
 <b>Table 1:</b> Descriptive Statistics for entire dataset, were percentage is representational of pertentiles.
 
-* This was repeated for all three species.
+* This was repeated for all three species. *Describe in more detail*
+~~~
+# Creating a DataFrame for each Species
+# Setosa
+setosa = dataset[dataset['species']=='setosa']
+print(setosa.describe())
+setosa.to_csv('Data_Setosa_Breakdown.csv',sep=',')
+
+# Versicolor
+versicolor = dataset[dataset['species']=='versicolor']
+print(versicolor.describe())
+versicolor.to_csv('Data_Versicolor_Breakdown.csv',sep=',')
+
+# Virginica
+virginica = dataset[dataset['species']=='virginica']
+print(virginica.describe())
+virginica.to_csv('Data_Virginica_Breakdown.csv',sep=',')
+~~~
+  * Setosa
+
+|       | sepal_length       | sepal_width         | petal_length       | petal_width         | 
+|-------|--------------------|---------------------|--------------------|---------------------| 
+| count | 50.0               | 50.0                | 50.0               | 50.0                | 
+| mean  | 5.005999999999999  | 3.4180000000000006  | 1.464              | 0.2439999999999999  | 
+| std   | 0.3524896872134512 | 0.38102439795469095 | 0.1735111594364455 | 0.10720950308167837 | 
+| min   | 4.3                | 2.3                 | 1.0                | 0.1                 | 
+| 25%   | 4.8                | 3.125               | 1.4                | 0.2                 | 
+| 50%   | 5.0                | 3.4                 | 1.5                | 0.2                 | 
+| 75%   | 5.2                | 3.6750000000000003  | 1.5750000000000002 | 0.3                 | 
+| max   | 5.8                | 4.4                 | 1.9                | 0.6                 | 
+
+
 * *paste code & dataset.describe*
 * Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
 * *paste code & Scatterplots & describe trends noted*
