@@ -132,6 +132,49 @@ plt.close()
 ~~~
 
 ![](Setosa_Scatter.png)
+ <b>Firgure 1:</b> Scatterplot of setosa data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
+
+**Describe patterns noticed*
+
+  * Versicolor
+~~~
+#Versicolor - Comparison of Petal Length vs Petal Width & Sepal Length vs Sepal width
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(17, 9))
+versicolor.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
+versicolor.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],sharex=False,sharey=False,label="petal",color='b')
+ax[0].set(title='Sepal Comparasion Versicolor', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion Versicolor',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+plt.show()
+plt.close()
+~~~
+
+![](Versicolor_Scatter.png)
+ <b>Firgure 2:</b> Scatterplot of versicolor data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
+
+**Describe patterns noticed*
+
+  * Virginica
+~~~
+#Virginica - Comparison of Petal Length vs Petal Width & Sepal Length vs Sepal width
+plt.figure()
+fig,ax=plt.subplots(1,2,figsize=(17, 9))
+virginica.plot(x="sepal_length", y="sepal_width", kind="scatter",ax=ax[0],sharex=False,sharey=False,label="sepal",color='r')
+virginica.plot(x="petal_length", y="petal_width", kind="scatter",ax=ax[1],sharex=False,sharey=False,label="petal",color='b')
+ax[0].set(title='Sepal Comparasion Virginica', ylabel='sepal-width')
+ax[1].set(title='Petal Comparasion Virginica',  ylabel='petal-width')
+ax[0].legend()
+ax[1].legend()
+plt.show()
+plt.close()
+~~~
+
+![](Virginica_Scatter.png)
+ <b>Firgure 2:</b> Scatterplot of virginica data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
+
+**Describe patterns noticed*
 
 # References **Edit to Havard Style*
 
