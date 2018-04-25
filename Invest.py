@@ -47,7 +47,6 @@ if input("Would you like to view a basic descriptive statistics for the setosa d
 if ( not os.path.isfile('Data_Setosa_Breakdown.csv')):
     data_setosa.to_csv('Data_Setosa_Breakdown.csv',sep=',')
 
-
 # Versicolor
 versicolor = dataset[dataset['species']=='versicolor']
 data_versicolor = versicolor.describe()
