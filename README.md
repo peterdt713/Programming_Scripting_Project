@@ -172,7 +172,7 @@ plt.close()
 ~~~
 
 ![](Virginica_Scatter.png)
- <b>Firgure 2:</b> Scatterplot of virginica data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
+ <b>Firgure 3:</b> Scatterplot of virginica data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
 
 **Describe patterns noticed*
 
@@ -189,3 +189,7 @@ plt.close()
 [5] https://www.kaggle.com/abhishekkrg/python-iris-data-visualization-and-explanation
 
 [6] https://en.support.wordpress.com/markdown-quick-reference/
+
+[7] https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+
+[8] https://www.cyberciti.biz/faq/python-file-exists-examples/
