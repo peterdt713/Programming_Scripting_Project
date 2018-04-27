@@ -23,21 +23,26 @@ Steps:
 ~~~~
 #Import Iris Data set into Pandas
 raw_data="iris.data.csv"
-dataset = pandas.read_csv(raw_data)
 ~~~~
-* Verified that the sample size of each species was 50. As in accordance with the background research.
+* Verified that the sample size of each species was 50. As in accordance with the background research. This was later updated to include user input. This allowed the user to select the sections of code to run and therefore increased the speed that the code took to run.
 ~~~
-#Count the size of each Species
-print(dataset.groupby('species').size())
-~~~
-* Using dataset.describe, *insert reference*,  to generate descriptive statistics. This includes the Count, Mean, STD, Min & Max and the percentiles of the dataset. Subsequently, this was visualized using the print function and finally this was saved into a CSV file.
-~~~
-# Describe the Data set
-print(dataset.describe())
+# Q: Print Basic Data?
+if input("Would you like to view a basic descriptive statistics for the full dataset? (Y/N): ") == "Y":
+    #Count the size of each Species
+    print(dataset.groupby('species').size())
 
+    # Describe the Data set
+    print(dataset.describe())
+~~~
+* Using dataset.describe [5] to generate descriptive statistics. This includes the Count, Mean, STD, Min & Max and the percentiles of the dataset. Subsequently, this was visualized using the print function and finally this was saved into a CSV file. This was subsequently updated to check if the CSV file already existed before creating the file. This again increased the speed at which the code would take to run post the first run. [8]
+
+* It can be noted by refering to the standard deviation (std), that the petel length has the widest varition of between the three species. While sepal width has the lowest. This can be verified by reviewing the min and max values of the each i.e. Petal Lenght; Min: 1.0, Max: 6.9 and Sepal Width; Min: 2.0, Max: 4.4. The petal lenght has a much higher spread. By drilling down further and creating a descriptive table for each of the species, it can be tested if this will be seen accross all the species.
+~~~
 # Saving Data to a CSV file
 data_full = dataset.describe()
-data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
+# Check is CSV file already exists (https://www.cyberciti.biz/faq/python-file-exists-examples/)
+if ( not os.path.isfile('Data_Set_Breakdown.csv')):
+    data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
 ~~~
  
 |       | sepal_length       | sepal_width        | petal_length       | petal_width        | 
@@ -53,7 +58,9 @@ data_full.to_csv('Data_Set_Breakdown.csv',sep=',')
 
 <b>Table 1:</b> Descriptive Statistics for entire dataset, were percentage is representational of pertentiles.
 
-* This was repeated for all three species. *Describe in more detail*
+* This was repeated for all three species. Similiar to the above, the code was subsequently updated to allow user input and to first check if the CSV file exists before creating a file.
+
+* In contrast the high standard deviation noted for petal lenght for accross all species. When each species is analysed individually the standard deviation is lowered significantly. This may indicate that petal lenght is a key feature in the differences between the species. Further visualisation of the data will confirm this.
 ~~~
 # Creating a DataFrame for each Species
 # Setosa
