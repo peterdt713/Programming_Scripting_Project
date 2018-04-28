@@ -234,10 +234,12 @@ When viewing all three species on the same scatterplot, figure 4, the setosa is 
   * Univariate Plots were created:
 
 ![](Box_Whisker_Plot.png)
+
 <b>Figure 5:</b> Box and Whisker plot of full dataset.
 
 
 ![](Histogram.png)
+
 <b>Figure 6:</b> Histogram of full dataset.
 
 Figure 5 shows that the distribution of the petal length, when viewing all species together, has a wide distribution. This further shows the spread that was noted by the larger standard deviation. In figure 6, it can be seen that sepal width follows a Gaussian (normal) distribution. The petal lenght also appears to follow this, bar the outliers between 1-2.
