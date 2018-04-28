@@ -1,14 +1,13 @@
 # Programming_Scripting_Project
 This project is comprised of research into the Fisher’s Iris data set.
 
-
 # Project Statement
 The project initially is comprised of research in the Iris Data Set. This will include, but is not limited to, the original publication of the data set, the development of the data set as historical significant, current methods utilised to analyse and visualize the various characteristics of the data.
 
 ^ Re-edit: Update throughout project i.e. research findings
 
 # Initial Research
-Ronald Fisher, a British statistician and biologist, first introduced the Iris Data set in 1936 in an article published in the peer-reviewed journal *Annals of Human Genetics*. [1] The article, *The use of multiple measurements in taxonomic problems*, details the measurements of three species of Iris flower that were growing within the same colony. The four measurements taken, for fifty of each the species, were the Sepal length, Sepal width, Petal length and Petal width. These measurements, which can be seen in table I of the article, would become the well known and commonly used Iris Data set. The three species were the iris setosa, iris versicolor and iris virginica.
+Ronald Fisher, a British statistician and biologist, first introduced the Iris Data set in 1936 in an article published in the peer-reviewed journal *Annals of Human Genetics*. [1] The article, *The use of multiple measurements in taxonomic problems*, details the measurements of three species of Iris flower that were growing within the same colony. The four measurements taken, for fifty of each the species, were the Sepal length, Sepal width, Petal length and Petal width. These measurements, which can be seen in table I of the article, would become the well-known and commonly used Iris Data set. The three species were the iris setosa, iris versicolor and iris virginica.
 
 ![](Iris_Images.png)
 <b>Image 1:</b> Three species of Iris flower utilized in the data set. [2]
@@ -36,7 +35,7 @@ if input("Would you like to view a basic descriptive statistics for the full dat
 ~~~
 * Using dataset.describe [5] to generate descriptive statistics. This includes the Count, Mean, STD, Min & Max and the percentiles of the dataset. Subsequently, this was visualized using the print function and finally this was saved into a CSV file. This was subsequently updated to check if the CSV file already existed before creating the file. This again increased the speed at which the code would take to run post the first run. [8]
 
-* It can be noted by refering to the standard deviation (std), that the petel length has the widest varition of between the three species. While sepal width has the lowest. This can be verified by reviewing the min and max values of the each i.e. Petal Lenght; Min: 1.0, Max: 6.9 and Sepal Width; Min: 2.0, Max: 4.4. The petal lenght has a much higher spread. By drilling down further and creating a descriptive table for each of the species, it can be tested if this will be seen accross all the species.
+* It can be noted by referring to the standard deviation (std), that the petal length has the widest variation of between the three species. While sepal width has the lowest. This can be verified by reviewing the min and max values of the each i.e. Petal Length; Min: 1.0, Max: 6.9 and Sepal Width; Min: 2.0, Max: 4.4. The petal length has a much higher spread. By drilling down further and creating a descriptive table for each of the species, it can be tested if this will be seen across all the species.
 ~~~
 # Saving Data to a CSV file
 data_full = dataset.describe()
@@ -58,9 +57,9 @@ if ( not os.path.isfile('Data_Set_Breakdown.csv')):
 
 <b>Table 1:</b> Descriptive Statistics for entire dataset, were percentage is representational of pertentiles.
 
-* This was repeated for all three species. Similiar to the above, the code was subsequently updated to allow user input and to first check if the CSV file exists before creating a file.
+* This was repeated for all three species. Similar to the above, the code was subsequently updated to allow user input and to first check if the CSV file exists before creating a file.
 
-* In contrast the high standard deviation noted for petal lenght for accross all species. When each species is analysed individually the standard deviation is lowered significantly. This may indicate that petal lenght is a key feature in the differences between the species. Further visualisation of the data will confirm this.
+* In contrast the high standard deviation noted for petal length, when viewing the data across all species. When each species is analysed individually the standard deviation is lowered significantly. This may indicate that petal length is a key indicator in the differences between the species. Further visualisation of the data will confirm this.
 ~~~
 # Creating a DataFrame for each Species
 # Setosa
@@ -135,8 +134,7 @@ if ( not os.path.isfile('Data_Virginica_Breakdown.csv')):
     | max   | 7.9                | 3.8                | 6.9                | 2.5                 | 
  <b>Table 4:</b> Descriptive Statistics for virginica dataset, were percentage is representational of pertentiles.
 
-
-* Scatterplots were created for all three species & a combined scatter plot. Subsequently saved.
+* Scatterplots were created for all three species and a combined scatter plot. These were subsequently saved and again the option for user input was later added.
 
   * Setosa
 ~~~
@@ -156,9 +154,9 @@ if input("Would you like to view a scatterplot of the setosa dataset? (Y/N): ") 
 ~~~
 
 ![](Setosa_Scatter.png)
- <b>Firgure 1:</b> Scatterplot of setosa data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
+ <b>Figure 1:</b> Scatterplot of setosa data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
 
-**Describe patterns noticed*
+In figure 1, the sepal width appears to be directly proportional to the sepal length. The petal width in comparison to petal length does slightly appear to follow a linear trend. However, when looking at a width of 0.2 cm there are 8 different petal lengths recorded.
 
   * Versicolor
 ~~~
@@ -178,9 +176,9 @@ if input("Would you like to view a scatterplot of the versicolor dataset? (Y/N):
 ~~~
 
 ![](Versicolor_Scatter.png)
- <b>Firgure 2:</b> Scatterplot of versicolor data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
+ <b>Figure 2:</b> Scatterplot of versicolor data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
 
-**Describe patterns noticed*
+In figure 2 both scatterplots indicate that the sepal width is directly proportional to the sepal length and the petal width is directly proportional to the petal length for the versicolor species.
 
   * Virginica
 ~~~
@@ -200,9 +198,9 @@ if input("Would you like to view a scatterplot of the virginica dataset? (Y/N): 
 ~~~
 
 ![](Virginica_Scatter.png)
- <b>Firgure 3:</b> Scatterplot of virginica data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
+ <b>Figure 3:</b> Scatterplot of virginica data. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length
 
-**Describe patterns noticed*
+For the virginica data, as seen in figure 3, a similar pattern is again noted. The petal comparison data shows more variance than both other species. Charting all species together may further show this.
 
   * Full Dataset
 ~~~
@@ -229,9 +227,9 @@ if input("Would you like to view a scatterplot of the full dataset? (Y/N): ") ==
 ~~~
 
 ![](All_Data_Scatter.png)
- <b>Firgure 4:</b> Scatterplot of full dataset. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length. 
+ <b>Figure 4:</b> Scatterplot of full dataset. Left: Sepal Width in comparison to Sepal Length. Right: Petal Width in comparison to Petal Length. 
 
-**Describe patterns noticed*
+When viewing all three species on the same scatterplot, figure 4, the setosa is easily identifiable. The versicolor and virginica share similarities in sepal width. However, the virginica species have a longer sepal length. The petals for the versicolor and virginica do have some crossover but not a substantial one.
 
 # References **Edit to Havard Style*
 
