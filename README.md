@@ -251,7 +251,19 @@ Figure 5 shows that the distribution of the petal length, when viewing all speci
 
 In accordance with the tutorial, scatterplots can be useful in indicating structured relationships within the data. Its also states that diagonal grouping, i.e. linear trends, suggest high correlation and predictable relationships. [7] The previous scatterplots, figures 1-4, all showed this diagonal grouping.
 
-# References **Edit to Havard Style*
+  * Models were created:
+
+![](Model_Ev.png)
+
+<b>Image 2:</b> Accuracy estimations for models.
+
+The five models created were as follows: 'LR' LogisticRegression, 'LDA' LinearDiscriminantAnalysis, 'KNN' KNeighborsClassifier, 'CART' DecisionTreeClassifier, 'NB' GaussianNB, 'SVM' SVC. According to the tutorial KNN is the most accurate. This could not be replicated. SVM was found to be the most accurate wich an accuracy of 93%. Refer to the below.
+
+![](Predict.png)
+
+<b>Image 3:</b> Predictions based on the SVM algorithm. 
+
+# References
 
 [1] https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
 
