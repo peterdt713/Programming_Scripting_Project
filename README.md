@@ -263,6 +263,66 @@ The five models created were as follows: 'LR' LogisticRegression, 'LDA' LinearDi
 
 <b>Image 3:</b> Predictions based on the SVM algorithm. 
 
+~~~
+# Q: Machine Learning?
+if input("Would you like to build and test a machine learning model? (Y/N): ") == "Y":
+    # Split-out validation dataset
+    print("Splitting the data into 0.8 for learning and 0.2 for testing...")
+    array = dataset.values
+    X = array[:,0:4]
+    Y = array[:,4]
+    validation_size = 0.20
+    seed = 7
+    X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=validation_size, random_state=seed)
+
+    # Test options and evaluation metric
+    seed = 7
+    scoring = 'accuracy'
+    
+    print("Creating 5 models,'LR' LogisticRegression, 'LDA' LinearDiscriminantAnalysis, 'KNN' KNeighborsClassifier, 'CART' DecisionTreeClassifier, 'NB' GaussianNB, 'SVM' SVC ...")
+    # Spot Check Algorithms
+    models = []
+    models.append(('LR', LogisticRegression()))
+    models.append(('LDA', LinearDiscriminantAnalysis()))
+    models.append(('KNN', KNeighborsClassifier()))
+    models.append(('CART', DecisionTreeClassifier()))
+    models.append(('NB', GaussianNB()))
+    models.append(('SVM', SVC()))
+    # evaluate each model in turn
+    results = []
+    names = []
+    # Q: Print Evaluation?
+    if input("Would you like view the evaluation of each model? (Y/N): ") == "Y":
+        for name, model in models:
+	        kfold = model_selection.KFold(n_splits=10, random_state=seed)
+	        cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+	        results.append(cv_results)
+	        names.append(name)
+	        msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
+	        print(msg)
+    
+    # Q: Print Evaluation #2?
+    if input("Would you like view a box and whisker plot of each model? (Y/N): ") == "Y":
+        # Compare Algorithms
+        fig = plt.figure()
+        fig.suptitle('Algorithm Comparison')
+        ax = fig.add_subplot(111)
+        plt.boxplot(results)
+        ax.set_xticklabels(names)
+        plt.show()
+    
+    print("SVM is the most accurate...") # According to the tutorial KNN is the most accurate. This could not be replicated. The below model is based on what was noted as the most accurate.
+    # Q: Make Predictions?
+    if input("Would you like to Make Predictions using the remaining 0.2 of the data? (Y/N): ") == "Y":
+        # Make predictions on validation dataset
+        SVM = SVC()
+        SVM.fit(X_train, Y_train)
+        predictions = SVM.predict(X_validation)
+        print(accuracy_score(Y_validation, predictions))
+        print(confusion_matrix(Y_validation, predictions))
+        print(classification_report(Y_validation, predictions))
+~~~
+
 # References
 
 [1] https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
