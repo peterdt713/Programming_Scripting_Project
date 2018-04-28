@@ -229,6 +229,26 @@ if input("Would you like to view a scatterplot of the full dataset? (Y/N): ") ==
 
 When viewing all three species on the same scatterplot, figure 4, the setosa is easily identifiable. The versicolor and virginica share similarities in sepal width. However, the virginica species have a longer sepal length. The petals for the versicolor and virginica do have some crossover but not a substantial one.
 
+* A machine learning tutorial [7] was then followed and adapted.
+
+  * Univariate Plots were created:
+
+![](Box_Whisker_Plot.png)
+<b>Figure 5:</b> Box and Whisker plot of full dataset.
+
+
+![](Histogram.png)
+<b>Figure 6:</b> Histogram of full dataset.
+
+Figure 5 shows that the distribution of the petal length, when viewing all species together, has a wide distribution. This further shows the spread that was noted by the larger standard deviation. In figure 6, it can be seen that sepal width follows a Gaussian (normal) distribution. The petal lenght also appears to follow this, bar the outliers between 1-2.
+
+  * Multivariate Plots were created:
+
+![](Scatter_Matrix.png)
+<b>Figure 7:</b> Scatterplot matrix  of full dataset.
+
+In accordance with the tutorial, scatterplots can be useful in indicating structured relationships within the data. Its also states that diagonal grouping, i.e. linear trends, suggest high correlation and predictable relationships. [7] The previous scatterplots, figures 1-4, all showed this diagonal grouping.
+
 # References **Edit to Havard Style*
 
 [1] https://onlinelibrary.wiley.com/doi/epdf/10.1111/j.1469-1809.1936.tb02137.x
